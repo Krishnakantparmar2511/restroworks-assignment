@@ -34,7 +34,7 @@ export default function RootLayout({ children, params }: { children: ReactNode; 
     <html lang={locale}>
       <body className="bg-white text-gray-900">
         <header className="p-4 shadow-md flex justify-between items-center">
-          <a href={`/${locale}`} className="text-xl font-bold"><Image width={260} alt="logo" height={40} src={"/restroworks-logo.jpg"}/></a>
+          <a href={`/${locale}`} className="text-xl font-bold"><Image width={260} alt="logo" height={40} src={"/images/restroworks-logo.jpg"}/></a>
           <nav className="flex gap-4"> 
             <a href={`/${locale}`}>{nav.home}</a>
             <a href={`/${locale}/contact`}>{nav.contact}</a>
