@@ -17,7 +17,7 @@ export default function Hero({ locale, content }: HeroProps) {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full text-sm font-medium text-slate-700 shadow-sm">
+            <div className="inline-flex my-2 items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full text-sm font-medium text-slate-700 shadow-sm">
               <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
               {locale === 'es' ? 'Nueva Generación de Soluciones' : 'Next-Gen Solutions'}
             </div>

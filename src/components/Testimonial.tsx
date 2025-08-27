@@ -9,8 +9,6 @@ export interface TestimonialProps {
   content: HomepageData["content"]["testimonials"];
 }
 
-import { TestimonialItem } from "../types";
-
 export default function Testimonial({ locale, content }: TestimonialProps) {
   const {
     currentIndex,

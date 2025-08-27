@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { defaultLocale, Locale, locales } from "../../i18n/setting";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import Image from "next/image";
+import { Header } from "@/components/Header";
 
 export function generateStaticParams() {
   return locales.map((l) => ({ locale: l }));
@@ -39,35 +40,11 @@ export default function RootLayout({
 }) {
   const locale = params.locale ?? defaultLocale;
 
-  const navigation = {
-    en: { home: "Home", contact: "Contact" },
-    es: { home: "Inicio", contact: "Contacto" },
-  };
-
-  const nav = navigation[locale];
-
   return (
     <html lang={locale}>
       <body className="bg-white text-gray-900">
-        <header className="p-4 shadow-md flex justify-between items-center">
-          <a href={`/${locale}`} className="text-xl font-bold">
-            <Image
-              width={260}
-              height={40}
-              alt="logo"
-              className="min-h-10 min-w-[260px]"
-              src="/images/restroworks-logo.jpg"
-              placeholder="blur"
-              blurDataURL="/images/restroworks-logo.jpg"
-            />
-          </a>
-          <nav className="flex gap-4">
-            <a href={`/${locale}`}>{nav.home}</a>
-            <a href={`/${locale}/contact`}>{nav.contact}</a>
-            <LanguageSwitcher current={locale} />
-          </nav>
-        </header>
-        <main className="container mx-auto p-6">{children}</main>
+        <Header locale={locale} />
+        <main>{children}</main>
         <footer className="p-4 mt-8 border-t text-center">
           © 2025 Restroworks
         </footer>
