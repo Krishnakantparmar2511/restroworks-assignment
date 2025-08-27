@@ -1,13 +1,12 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://restroworks.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://restroworks-assignment.vercel.app';
   const locales = ['en', 'es'];
   const pages = ['', 'contact'];
   
   const sitemap: MetadataRoute.Sitemap = [];
   
-  // Add homepage and contact page for each locale
   locales.forEach(locale => {
     pages.forEach(page => {
       const url = page === '' ? `/${locale}` : `/${locale}/${page}`;
