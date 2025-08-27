@@ -19,7 +19,7 @@ export async function getHomepageData(locale: string): Promise<HomepageData> {
     return {
       meta: {
         title: locale === 'es' ? 'Restroworks - Transforma tu Negocio' : 'Restroworks - Transform Your Business',
-        description: locale === 'es' ? 'Soluciones modernas para tu empresa' : 'Modern solutions for your business',
+        description: locale === 'es' ? 'El servidor está en un servidor gratuito y se reinicia tras 1 minuto de inactividad. Inténtalo de nuevo en 2 minutos.' : 'Backend is on a free server and restarts after 1 min of inactivity. Please try again in 2 mins.',
         keywords: locale === 'es' ? 'negocio, tecnología, innovación' : 'business, technology, innovation'
       },
       content: {
