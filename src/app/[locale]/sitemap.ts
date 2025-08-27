@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://localhost:3000"; 
+  const base = "https://restroworks-assignment.vercel.app"; 
   const paths = ["", "/contact"];
   const urls = [];
   for (const l of locales) {
