@@ -5,7 +5,6 @@ export interface ContactFormData {
   message: string;
 }
 
-
 export interface HomepageData {
   meta: {
     title: string;
